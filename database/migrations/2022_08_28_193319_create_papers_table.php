@@ -1,11 +1,11 @@
 <?php
 
-use App\Models\Post;
+use App\Models\Paper;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePostsTable extends Migration
+class CreatePapersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,17 +14,18 @@ class CreatePostsTable extends Migration
      */
     public function up()
     {
-        Schema::create('posts', function (Blueprint $table) {
+        Schema::create('papers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('slug');
+            $table->string('url');
             $table->text('extract')->nullable();
             $table->longText('body')->nullable();
-            $table->enum('status', [Post::MODERATION, Post::PUBLISHED]);
+            $table->enum('status', [Paper::MODERATION, Paper::PUBLISHED]);
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')
                 ->onDelete('cascade');
             $table->foreignId('category_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-
+            $table->foreignId('author_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
         });
     }
@@ -36,6 +37,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::dropIfExists('papers');
     }
 }
