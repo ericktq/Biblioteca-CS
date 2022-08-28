@@ -23,6 +23,7 @@ class TagFactory extends Factory
     public function definition()
     {
         $name = $this->faker->unique()->word(30);
+
         return [
             'name' => $name,
             'slug' => Str::slug($name),
