@@ -14,6 +14,7 @@ class UserController extends Controller
         $this->middleware('can:admin.users.index')->only('index');
         $this->middleware('can:admin.users.edit')->only('edit', 'update');
     }
+
     public function index()
     {
         return view('admin.users.index');
