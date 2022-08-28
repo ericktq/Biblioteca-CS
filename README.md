@@ -1,26 +1,24 @@
-## Comenzando **🚀**
+## **Biblioteca CS**
 
-### **Documentación 📋**
+### **Antes de empezar 🚀**
 La documentación del proyecto la encuentras en la carpeta **doc**.
 
-### **Estilos de Programación 📋**
-#### Cookbook
-El siguiente fragmento de código es parte la clase UserFactory que hereda de Factory generalmente usado para crear data fake en una base de datos. La funcion definition retorna un arreglo donde se le declara los atributos de nuestro modelo User.
-![image](https://user-images.githubusercontent.com/38531618/185728970-c4a2113f-9f60-4680-9c39-ef4802c8978c.png)
+### **Proposito 😎**
 
-#### Restful
-El siguiente fragmento de codigo es un controlador User el cual dependiendo de que funcion miembro usen hara uso de la logica implementado en los mismos.
-![image](https://user-images.githubusercontent.com/38531618/185729357-8ca125e8-1812-4642-8704-e0d39a325408.png)
+El presente proyecto tiene la finalidad de aplicar todo lo aprendido a lo largo del semestre del curso de Ingenieria de Software carrera profesional de Ciencias de la Computación de la Universidad Nacional de San Agustín.
+Ademas de ello, el presente documento tiene como propósito elicitar ,especificar y analizar los requisitos de software y definir las especificaciones funcionales y no funcionales para el desarrollo de un sistema que simula una biblioteca web.
 
-### **Codificación Legible 📋**
-
-1. Keep all scopes (file/class/function) small and sorted.
-Haciendo uso de clases logramos mantener un codigo mas pequeño y ordenado
-2. Class Name Suffixes
-Las clases tienen un sufijo las cuales indican 
-3. Docstrings 
-4. Separate models from views and control (MVC)
-El framework usado para el proyecto aplica lo que es MVC dado que todo esta separado segun esta arquitectura.
-5. Coherent Abstraction
-
-![image](https://user-images.githubusercontent.com/38531618/185838720-4a146350-97cf-4d08-b022-701adac3a4a9.png)
+### **Tecnologias usadas 🦾**
+1. Frontend
+- TailwindCss
+- Html5
+- Blade Templates
+2. Backend
+- Laravel
+- Eloquent ORM
+3. Gestor de Base de Datos
+- MySQL
+4. SysAdmin o cultura DevOps
+- Laravel Sail
+- Docker
+- Trello
