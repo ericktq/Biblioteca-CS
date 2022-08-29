@@ -20,6 +20,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
+
         return view('admin.categorias.index', compact('categories'));
     }
 
@@ -34,9 +35,11 @@ class CategoryController extends Controller
             'name' => 'required',
             'slug' => 'required|unique:categories',
         ]);
+
         $categoria = Category::create($request->all());
 
-        return redirect()->route('admin.categorias.edit', $categoria)->with('info', 'Categoría creada correctamente');
+        return redirect()->route('admin.categorias.edit', $categoria)
+            ->with('info', 'Categoría creada correctamente');
     }
 
     public function edit(Category $categoria)

@@ -15,11 +15,6 @@ class Author extends Model
         'email',
     ];
 
-    /**
-     * > The `papers()` function returns a collection of all the papers that belong to the user
-     *
-     * @return A collection of papers
-     */
     public function papers()
     {
         return $this->belongsToMany(Paper::class);

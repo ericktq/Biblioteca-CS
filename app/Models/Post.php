@@ -23,9 +23,7 @@ class Post extends Model
         return 'slug';
     }
 
-    /**
-     * Relacion uno a muchos inversa
-     */
+
     public function user()
     {
         return $this->belongsTo(User::class);
@@ -36,18 +34,14 @@ class Post extends Model
         return $this->belongsTo(Category::class);
     }
 
-    /**
-     * Relacion muchos a muchos
-     */
+
     public function tags()
 
     {
         return $this->belongsToMany(Tag::class);
     }
 
-    /**
-     * Relacion uno a muchos polimorfica
-     */
+
     public function image()
     {
         return $this->morphOne(Image::class, 'imageable');
