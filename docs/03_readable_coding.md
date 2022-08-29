@@ -1,5 +1,3 @@
-### **Codificación Legible 📋**
-
 1. Keep all scopes (file/class/function) small and sorted.
 Haciendo uso de clases logramos mantener un codigo mas pequeño y ordenado
 2. Class Name Suffixes
